@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <title>Web Share Target Test Demo Share page</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Web Share Target Demo App Share page</h1>
+    <div id="shareable">
+        <div class="text-input">
+            <label>Title</label>
+            <input id="title" type="text" />
+        </div>
+        <div class="text-input">
+            <label>Text</label>
+            <input id="text" type="text" />
+        </div>
+        <div class="text-input">
+            <label>URL</label>
+            <input id="url" type="text" />
+        </div>
+        <div class="text-input">
+            <input id="files" type="file" multiple>
+        </div> 
+    </div>
+    <div class="text-input" >
+        <button id="btnShare" class="button"> Share via web share api</button>
+    </div>
+    <!-- <div>
+        <button id="getContacts" class="button"> Pick Contact To Share with</button>
+    </div>
+    <div id="contactList"></div> -->
+
+    <div id="snackbar">
+        <div class="close">
+            <button onclick="closeMessage()" >x</button>
+        </div>
+        <div id="snackbarMessage"> </div>
+    </div>
+
+    <script src="share.js"></script>
+</body>
+
+</html>

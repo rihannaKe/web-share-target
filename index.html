@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <link rel="manifest" href="manifest.json">
+    <title>Web Share Target Test App</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#201c79" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+        background-color: aquamarine;
+        color: darkblue;
+        text-align: center;
+        align-content: center;
+    }
+</style>
+
+<body>
+    <h1>Web Share Target Demo App</h1>
+
+    <a href="sharepage.html"> Go To Share Page </a>
+
+    <script>
+        'use strict';
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(registration => {
+                console.log('ServiceWorker registration successful with scope:',
+                    registration.scope);
+            }).catch(err => {
+                console.error('ServiceWorker registration failed:', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
