@@ -12,9 +12,9 @@ const snackbar = document.querySelector("#snackbar");
 const divMess = document.querySelector("#snackbarMessage");
 // const file_input = document.querySelector('#files');
 let supportMess;
-if (!contactSupported) {
-    supportMess = "<p>The Contact API is not available in your browser.</p>";
-}
+// if (!contactSupported) {
+//     supportMess = "<p>The Contact API is not available in your browser.</p>";
+// }
 if (!shareSupport) {
     supportMess += "<p>The Contact API is not available in your browser.</p>";
 }
@@ -84,17 +84,17 @@ function onLoad() {
     populateFields();
 }
 
-function handleContacts(contacts) {
-    if (contacts.length <= 0) {
-        showMessage("<p>No contact selected</p>")
-        return
-    }
-    for (const contact in contactlist) {
-        let contactP = document.createElement('div');
-        contactP.innerHTML = "<p>" + JSON.stringify(contact) + "</p";
-        contactList.appendChild(contactP);
-    }
-}
+// function handleContacts(contacts) {
+//     if (contacts.length <= 0) {
+//         showMessage("<p>No contact selected</p>")
+//         return
+//     }
+//     for (const contact in contactlist) {
+//         let contactP = document.createElement('div');
+//         contactP.innerHTML = "<p>" + JSON.stringify(contact) + "</p";
+//         contactList.appendChild(contactP);
+//     }
+// }
 
 btnShare.addEventListener('click', () => {
     // web share api v2 with file
